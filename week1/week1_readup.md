@@ -9,6 +9,7 @@ paragraphing using html tags - headers, /br and /hr
 
 blockquoute using blackquote tag  
  blockquote [content ]/blockquote
+
 blockquote - is like indentation
 
 em /em - emphasize the content, normally in italics
