@@ -31,5 +31,6 @@ dl dt dd /dl/dt/dd
 dl - definition list
 dt - term or name, configures a line break above and below the text
 dd - contains the definition / description and indents the text
+
 :rotating_light:
 **Note.** must follow the order of dl - dt - dd :rotating_light:
