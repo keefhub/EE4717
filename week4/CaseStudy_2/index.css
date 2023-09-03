@@ -1,0 +1,145 @@
+header {
+  text-align: center;
+  background-color: #836953;
+  width: 80%;
+  margin: auto;
+  min-width: 850px;
+}
+header h1 {
+  margin-bottom: -20px;
+  height: 75px;
+}
+
+.main-content {
+  color: #000066;
+  width: 80%;
+  margin: auto;
+  min-width: 850px;
+  height: auto;
+  background-color: aqua;
+}
+
+.nav-bar {
+  float: left;
+  width: 150px;
+  margin-top: 30px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.nav-bar a {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #f4f4f4;
+}
+
+.nav-bar a:hover {
+  background-color: #745347;
+  color: #f4f4f4;
+}
+
+.body {
+  margin-left: 155px;
+  background-color: #fffaa0;
+  color: #000000;
+  height: auto;
+  padding-bottom: 50px;
+}
+
+.body h2,
+p {
+  padding-top: 10px;
+  height: 40px;
+  margin-left: 20px;
+}
+
+.product-content {
+  display: flex;
+  align-items: center;
+}
+
+.product-image {
+  margin-top: 50px;
+  margin: auto;
+  margin-left: 40px;
+}
+
+.product-list {
+  flex: 1;
+}
+
+.product-list li {
+  list-style-image: url("./image/trillium.gif");
+  background-repeat: repeat-y;
+}
+
+.form {
+  margin-left: 50px;
+}
+
+.form label {
+  vertical-align: top;
+  padding-right: 10px;
+  font-weight: bold;
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+  margin-right: 50px;
+  padding: 5px;
+}
+
+.table {
+  margin: 0 auto;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table table {
+  border: none;
+  width: 75%;
+  border-spacing: 1px;
+}
+
+.table tr,
+td {
+  font-size: large;
+  height: 75px;
+  padding: 10px;
+  border-style: none;
+}
+
+.table tr:nth-of-type(odd) {
+  background-color: #f2d3ba;
+}
+
+.pdt-menu {
+  text-align: center;
+  font-weight: bold;
+}
+
+.footer {
+  height: 80px;
+  width: 80%;
+  margin: auto;
+  min-width: 850px;
+  text-align: center;
+  background-color: #836953;
+  overflow: hidden;
+}
+
+.footer > footer {
+  padding-top: 20px;
+  margin: 0;
+}
