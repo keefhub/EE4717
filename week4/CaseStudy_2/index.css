@@ -6,6 +6,10 @@ header {
   min-width: 850px;
 }
 
+body {
+  background-color: grey;
+}
+
 .main-content {
   color: #000066;
   width: 80%;
@@ -71,6 +75,12 @@ p {
 .product-list li {
   list-style-image: url("./image/trillium.gif");
   background-repeat: repeat-y;
+}
+
+.product-list ul li,
+p {
+  font-size: 25px;
+  color: black;
 }
 
 .form {
