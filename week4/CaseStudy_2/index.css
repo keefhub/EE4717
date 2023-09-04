@@ -1,13 +1,9 @@
 header {
   text-align: center;
-  background-color: #836953;
+  background-color: #ccaa66;
   width: 80%;
   margin: auto;
   min-width: 850px;
-}
-header h1 {
-  margin-bottom: -20px;
-  height: 75px;
 }
 
 .main-content {
@@ -16,7 +12,7 @@ header h1 {
   margin: auto;
   min-width: 850px;
   height: auto;
-  background-color: aqua;
+  background-color: #836953;
 }
 
 .nav-bar {
@@ -52,8 +48,8 @@ header h1 {
 
 .body h2,
 p {
-  padding-top: 10px;
-  height: 40px;
+  margin-top: 0;
+  padding-top: 20px;
   margin-left: 20px;
 }
 
@@ -129,13 +125,34 @@ td {
   font-weight: bold;
 }
 
+.music-table {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-table table {
+  border: none;
+  width: 75%;
+  border-spacing: 1px;
+}
+
+.music-table tr,
+td {
+  font-size: large;
+  height: 75px;
+  padding: 10px;
+  border-style: none;
+}
+
 .footer {
   height: 80px;
   width: 80%;
   margin: auto;
   min-width: 850px;
   text-align: center;
-  background-color: #836953;
+  background-color: #ccaa66;
   overflow: hidden;
 }
 
