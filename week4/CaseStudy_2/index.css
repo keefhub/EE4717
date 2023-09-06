@@ -7,16 +7,15 @@ header {
 }
 
 body {
-  background-color: grey;
+  background-color: #E9E1AD;
 }
 
 .main-content {
-  color: #000066;
   width: 80%;
   margin: auto;
   min-width: 850px;
   height: auto;
-  background-color: #836953;
+  background-color: #E2D1B2;
 }
 
 .nav-bar {
@@ -29,22 +28,22 @@ body {
 
 .nav-bar a {
   display: block;
-  margin: 10px 0;
+  margin:  0;
   padding: 8px;
   font-size: 18px;
   text-decoration: none;
   font-weight: bold;
-  color: #f4f4f4;
+  color: #A88262;
 }
 
 .nav-bar a:hover {
-  background-color: #745347;
-  color: #f4f4f4;
+
+  color: #7E4E44;
 }
 
 .body {
   margin-left: 155px;
-  background-color: #fffaa0;
+  background-color: #F5F5DD;
   color: #000000;
   height: auto;
   padding-bottom: 50px;
@@ -127,7 +126,7 @@ td {
 }
 
 .table tr:nth-of-type(odd) {
-  background-color: #f2d3ba;
+  background-color: #ccaa66;
 }
 
 .pdt-menu {
