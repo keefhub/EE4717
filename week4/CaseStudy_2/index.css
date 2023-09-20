@@ -3,7 +3,7 @@ header {
   background-color: #ccaa66;
   width: 80%;
   margin: auto;
-  min-width: 850px;
+  min-width: 800px;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 .main-content {
   width: 80%;
   margin: auto;
-  min-width: 850px;
+  min-width: 800px;
   height: auto;
   background-color: #E2D1B2;
 }
@@ -39,6 +39,15 @@ body {
 .nav-bar a:hover {
 
   color: #7E4E44;
+}
+
+.nav-bar a:visited{
+  color: red;
+}
+
+.nav-bar a:active{
+  color: black;
+  text-decoration: underline;
 }
 
 .body {

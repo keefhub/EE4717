@@ -27,13 +27,14 @@
           application. Required fields are marked with an asterisk *
         </p>
         <div class="form">
-          <form method="get">
+          <form method="POST" action="show_form.php">
             <label for="name">*Name:</label
             ><input
               type="text"
               name="name"
               id="name"
               placeholder="Enter your name here"
+              required
             />
             <br /><br />
             <label for="email">*E-mail:</label
@@ -42,9 +43,10 @@
               name="email"
               id="email"
               placeholder="Enter your E-mail ID here"
+              required
             /><br /><br />
-            <label for="start-date">Start Date:</label
-            ><input type="date" name="date" id="date" /> <br /><br />
+            <label for="start-date">*Start Date:</label
+            ><input type="date" name="date" id="date" required/> <br /><br />
             <label for="experience">*Experience:</label
             ><textarea
               name="experience"
@@ -52,11 +54,12 @@
               rows="5"
               cols="50"
               placeholder="Enter your past experience here"
+              required
             ></textarea>
             <br /><br />
             <input type="reset" />
             <br /><br />
-            <input type="submit" value="Apply Now" />
+            <input type="submit" value="Apply Now" onclick=/>
           </form>
         </div>
       </div>
