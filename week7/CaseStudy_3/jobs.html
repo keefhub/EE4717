@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaJam Coffee House - jobs</title>
+    <script type="text/javascript" src="jobs.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <header>
+      <img src="./image/javalogo.gif" alt="javajam logo" />
+    </header>
+    <div class="main-content">
+      <div class="nav-bar">
+        <nav>
+          <b>
+            <a href="index.html">Home</a> &nbsp;
+            <a href="menu.html">Menu</a> &nbsp;
+            <a href="music.html">Music</a> &nbsp;
+            <a href="jobs.html">Jobs</a>
+          </b>
+        </nav>
+      </div>
+      <div class="body">
+        <h2>Jobs at JavaJam</h2>
+        <p>
+          Want to work at JavaJam? Fillout the form below to start your
+          application. Required fields are marked with an asterisk *
+        </p>
+        <div class="form">
+          <form
+            method="POST"
+            onsubmit="return form_validation()"
+            action="show_form.php"
+          >
+            <label for="name">*Name:</label
+            ><input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name here"
+              required
+              onchange="name_validation()"
+            />
+            <br /><br />
+            <label for="email">*E-mail:</label
+            ><input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your E-mail ID here"
+              required
+              onchange="email_validation()"
+            /><br /><br />
+            <label for="start-date">*Start Date:</label
+            ><input type="date" name="date" id="date" required /> <br /><br />
+            <label for="experience">*Experience:</label
+            ><textarea
+              name="experience"
+              id="experience"
+              rows="5"
+              cols="50"
+              placeholder="Enter your past experience here"
+              required
+            ></textarea>
+            <br /><br />
+            <input type="reset" />
+            <br /><br />
+            <input type="submit" value="Apply Now" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <footer>
+        <small><i> Copyright &copy; 2014 JavaJam Coffee House</i></small>
+        <br />
+        <a href="lim@keith.com">lim@keith.com</a>
+      </footer>
+    </div>
+  </body>
+</html>
