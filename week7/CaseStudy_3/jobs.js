@@ -20,11 +20,6 @@ const email_validation = () => {
   }
 };
 
-const date_selection = () => {
-  const date = getElementById("date").value;
-  date.min = new Date().toISOString().split("T")[0];
-};
-
 const form_validation = () => {
   if (!name_validation()) {
     return false;

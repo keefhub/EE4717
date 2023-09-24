@@ -52,8 +52,26 @@
               required
               onchange="email_validation()"
             /><br /><br />
+
             <label for="start-date">*Start Date:</label
-            ><input type="date" name="date" id="date" required /> <br /><br />
+            ><input type="date" name="date" id="date" required />
+            <script>
+              const date = new Date();
+              let tdate = date.getDate() + 1;
+              let month = date.getMonth() + 1;
+              const year = date.getFullYear();
+              if (tdate < 10) {
+                tdate = "0" + tdate;
+              }
+              if (month < 10) {
+                month = "0" + month;
+              }
+              const today = year + "-" + month + "-" + tdate;
+              console.log(today);
+              document.getElementById("date").setAttribute("min", today);
+            </script>
+
+            <br /><br />
             <label for="experience">*Experience:</label
             ><textarea
               name="experience"
@@ -62,6 +80,7 @@
               cols="50"
               placeholder="Enter your past experience here"
               required
+              maxlength="300"
             ></textarea>
             <br /><br />
             <input type="reset" />
