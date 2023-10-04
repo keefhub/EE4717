@@ -4,6 +4,7 @@
     <title>JavaJam Coffee House - menu</title>
     <link rel="stylesheet" href="index.css" />
     <meta charset="utf-8" />
+    <script type="text/javascript" src="menu.js"></script>
   </head>
   <body>
     <header>
@@ -32,14 +33,55 @@
                   >Endless Cup $2.00</span
                 >
               </td>
+              <td>
+                <input
+                  type="text"
+                  name="justjavaqty"
+                  size="3"
+                  maxlength="3"
+                  oninput="javajam_price()"
+                />
+              </td>
+              <td>
+                <input type="text" id="justjavaprice" readonly />
+              </td>
             </tr>
             <tr>
               <td class="pdt-menu">Cafe au Lait</td>
               <td>
-                House blended coffee infused a smooth, steamed milk <br /><span
-                  style="font-weight: bold; font-size: large"
-                  >Single $2.00 Double $3.00</span
+                House blended coffee infused a smooth, steamed milk
+                <br /><span style="font-weight: bold; font-size: large"
+                  ><label>
+                    <input
+                      type="radio"
+                      name="cafeaulait"
+                      value="2.0"
+                      id="single"
+                    />
+                    Single $2.00</label
+                  >
+                  <label>
+                    <input
+                      type="radio"
+                      name="cafeaulait"
+                      value="3.0"
+                      id="double"
+                    />
+                    Double $3.00
+                  </label></span
                 >
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="cafeaulaitqty"
+                  size="3"
+                  maxlength="3"
+                  oninput="cafeaulait_price()"
+                />
+              </td>
+              <td>
+                <input type="text" id="cafeaulaitprice" readonly />
               </td>
             </tr>
             <tr>
@@ -48,11 +90,59 @@
                 Sweetened espresso blended with icy-cold milk and served in a
                 chilled glass <br /><span
                   style="font-weight: bold; font-size: large"
-                  >Single $4.75 Double $5.75</span
-                >
+                  ><label>
+                    <input
+                      type="radio"
+                      name="icedcappucino"
+                      id="single_cappu"
+                      value="4.75"
+                    /> </label
+                  >Single $4.75
+                  <label>
+                    <input
+                      type="radio"
+                      name="icedcappucino"
+                      id="double_cappu"
+                      value="5.75"
+                    />
+                    Double $5.75
+                  </label>
+                </span>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="icedcappucinoqty"
+                  size="3"
+                  maxlength="3"
+                  oninput="icedcappucino_price()"
+                />
+              </td>
+              <td>
+                <input type="text" id="icedcappucinoprice" readonly />
               </td>
             </tr>
           </table>
+        </div>
+        <div class="total_price">
+          <label for="total_price">Total Price:</label>
+          <input type="text" id="total" readonly />
+          <script>
+            if (document.getElementById("total").value === NaN) {
+              document.getElementById("total").value = 0;
+            }
+            const javajam_total = parseFloat(
+              document.getElementById("justjavaprice").value
+            );
+            const cafeaulait_total = parseFloat(
+              document.getElementById("cafeaulaitprice").value
+            );
+            const icedcappucino_total = parseFloat(
+              document.getElementById("icedcappucinoprice").value
+            );
+            var total = javajam_total + cafeaulait_total + icedcappucino_total;
+            document.getElementById("total").value = total;
+          </script>
         </div>
       </div>
     </div>

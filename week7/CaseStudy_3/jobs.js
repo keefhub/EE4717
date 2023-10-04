@@ -2,9 +2,10 @@ const name_validation = () => {
   const doc_name = document.getElementById("name").value;
   const test_name = /^[A-Za-z ]+$/;
   if (!test_name.test(doc_name)) {
-    alert("Please enter a valid name");
+    document.getElementById("name").style.border = "1px solid red";
     return false;
   } else {
+    document.getElementById("name").style.border = "1px solid green";
     return true;
   }
 };

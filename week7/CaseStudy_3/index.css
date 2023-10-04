@@ -7,7 +7,7 @@ header {
 }
 
 body {
-  background-color: #E9E1AD;
+  background-color: #e9e1ad;
 }
 
 .main-content {
@@ -15,7 +15,7 @@ body {
   margin: auto;
   min-width: 800px;
   height: auto;
-  background-color: #E2D1B2;
+  background-color: #e2d1b2;
 }
 
 .nav-bar {
@@ -28,31 +28,30 @@ body {
 
 .nav-bar a {
   display: block;
-  margin:  0;
+  margin: 0;
   padding: 8px;
   font-size: 18px;
   text-decoration: none;
   font-weight: bold;
-  color: #A88262;
+  color: #a88262;
 }
 
 .nav-bar a:hover {
-
-  color: #7E4E44;
+  color: #7e4e44;
 }
 
-.nav-bar a:visited{
+.nav-bar a:visited {
   color: red;
 }
 
-.nav-bar a:active{
+.nav-bar a:active {
   color: black;
   text-decoration: underline;
 }
 
 .body {
   margin-left: 155px;
-  background-color: #F5F5DD;
+  background-color: #f5f5dd;
   color: #000000;
   height: auto;
   padding-bottom: 50px;
@@ -118,6 +117,12 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.total_price {
+  display: block;
+  padding-top: 50px;
+  color: #7e4e44;
 }
 
 .table table {
