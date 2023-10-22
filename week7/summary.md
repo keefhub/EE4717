@@ -103,4 +103,4 @@ Passing by reference
         $value += $amount
     }
 
-isset() : tell if a var is created and a given a value
+isset() : tells if a var is created and a given a value

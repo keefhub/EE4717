@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Daily Sales</title>
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <header>
+      <img src="./image/javalogo.gif" alt="javajam logo" />
+    </header>
+    <div class="main-content">
+      <div class="nav-bar">
+        <nav>
+          <b>
+            <a href="index.html">Daily Sales</a> &nbsp;
+            <a href="report.html">Report</a> &nbsp;
+          </b>
+        </nav>
+      </div>
+      <div class="body">
+        <div class="table">
+          <table border="1">
+            <tr>
+              <td class="pdt-menu">Just Java</td>
+              <td>
+                Regular house blend, decaffeinated coffee, or flavour of the
+                day. <br /><span style="font-weight: bold; font-size: large"
+                  >Endless Cup $2.00</span
+                >
+              </td>
+              <td>
+                <input type="text" name="justjavaqty" size="3" maxlength="3" />
+              </td>
+              <td>
+                <input type="text" id="justjavaprice" readonly />
+              </td>
+            </tr>
+            <tr>
+              <td class="pdt-menu">Cafe au Lait</td>
+              <td>
+                House blended coffee infused a smooth, steamed milk
+                <br /><span style="font-weight: bold; font-size: large"
+                  ><label>
+                    <input
+                      type="radio"
+                      name="cafeaulait"
+                      value="2.0"
+                      id="single"
+                    />
+                    Single $2.00</label
+                  >
+                  <label>
+                    <input
+                      type="radio"
+                      name="cafeaulait"
+                      value="3.0"
+                      id="double"
+                    />
+                    Double $3.00
+                  </label></span
+                >
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="cafeaulaitqty"
+                  size="3"
+                  maxlength="3"
+                />
+              </td>
+              <td>
+                <input type="text" id="cafeaulaitprice" readonly />
+              </td>
+            </tr>
+            <tr>
+              <td class="pdt-menu">Iced Cappucino</td>
+              <td>
+                Sweetened espresso blended with icy-cold milk and served in a
+                chilled glass <br /><span
+                  style="font-weight: bold; font-size: large"
+                  ><label>
+                    <input
+                      type="radio"
+                      name="icedcappucino"
+                      id="single_cappu"
+                      value="4.75"
+                    /> </label
+                  >Single $4.75
+                  <label>
+                    <input
+                      type="radio"
+                      name="icedcappucino"
+                      id="double_cappu"
+                      value="5.75"
+                    />
+                    Double $5.75
+                  </label>
+                </span>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="icedcappucinoqty"
+                  size="3"
+                  maxlength="3"
+                />
+              </td>
+              <td>
+                <input type="text" id="icedcappucinoprice" readonly />
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <footer>
+        <small><i> Copyright &copy; 2014 JavaJam Coffee House</i></small>
+        <br />
+        <a href="lim@keith.com">lim@keith.com</a>
+      </footer>
+    </div>
+  </body>
+</html>
