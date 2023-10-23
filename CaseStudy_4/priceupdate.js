@@ -1,9 +1,9 @@
 function retrieveprice() {
   fetch("retrieveprice.php")
-  .then(response => response.json())
-  .then((coffeeprice) => {
-    coffeeprice.forEach(coffee => {
-      /*
+    .then((response) => response.json())
+    .then((coffeeprice) => {
+      coffeeprice.forEach((coffee) => {
+        /*
       switch(coffee.ID) {
         case 1:
           document.getElementById("pricejj").innerHTML = '$' + coffee.price;
@@ -16,24 +16,20 @@ function retrieveprice() {
         case 5:
           document.getElementById("capprice2").innerHTML = '$' + coffee.price;
       }*/
-      if (coffee.ID == 1) {
-        document.getElementById("pricejj").innerHTML = '$' + coffee.price;
-      }
-      else if (coffee.ID == 2) {
-        document.getElementById("calprice1").innerHTML = '$' + coffee.price;
-      }
-      else if (coffee.ID == 3) {
-        document.getElementById("calprice2").innerHTML = '$' + coffee.price;
-      }
-      else if (coffee.ID == 4) {
-        document.getElementById("capprice1").innerHTML = '$' + coffee.price;
-      }
-      else if(coffee.ID == 5) {
-        document.getElementById("capprice2").innerHTML = '$' + coffee.price;
-      }
-    });
-  })
-  .catch(console.error);
+        if (coffee.ID == 1) {
+          document.getElementById("pricejj").innerHTML = "$" + coffee.price;
+        } else if (coffee.ID == 2) {
+          document.getElementById("calprice1").innerHTML = "$" + coffee.price;
+        } else if (coffee.ID == 3) {
+          document.getElementById("calprice2").innerHTML = "$" + coffee.price;
+        } else if (coffee.ID == 4) {
+          document.getElementById("capprice1").innerHTML = "$" + coffee.price;
+        } else if (coffee.ID == 5) {
+          document.getElementById("capprice2").innerHTML = "$" + coffee.price;
+        }
+      });
+    })
+    .catch(console.error);
 }
 
 function showPriceInputjj() {
@@ -41,7 +37,7 @@ function showPriceInputjj() {
 
   // Create a text input and submit button using innerHTML
   priceContainer.innerHTML = `
-      <input type="text" id="new-pricejj" placeholder="Enter New Price">
+      <input type="number" step="0.1" min="0" id="new-pricejj" placeholder="Enter New Price">
       <button id="submit-button" onclick="changePricejj()">Submit</button>
   `;
 }
@@ -54,21 +50,22 @@ function changePricejj() {
   const formData = new FormData();
   formData.append("newPrice", submittedPrice);
   formData.append("priceId", 1);
+  console.log(formData);
 
   // Send an HTTP POST request to the PHP script
   fetch("change_price.php", {
-      method: "POST",
-      body: formData,
+    method: "POST",
+    body: formData,
   })
-  .then(response => response.text())
-  .then(data => {
+    .then((response) => response.text())
+    .then((data) => {
       // Handle the response from the server (e.g., display a message to the user)
       retrieveprice();
       alert(data);
-  })
-  .catch(error => {
+    })
+    .catch((error) => {
       console.error("Error:", error);
-  });
+    });
 
   // After updating the price, reset the content
   const priceContainer = document.getElementById("jjprice");
@@ -100,18 +97,18 @@ function changePricecal(id) {
 
   // Send an HTTP POST request to the PHP script
   fetch("change_price.php", {
-      method: "POST",
-      body: formData,
+    method: "POST",
+    body: formData,
   })
-  .then(response => response.text())
-  .then(data => {
+    .then((response) => response.text())
+    .then((data) => {
       // Handle the response from the server (e.g., display a message to the user)
       retrieveprice();
       alert(data);
-  })
-  .catch(error => {
+    })
+    .catch((error) => {
       console.error("Error:", error);
-  });
+    });
 
   // After updating the price, reset the content
   const priceContainer = document.getElementById("calprice");
@@ -119,7 +116,6 @@ function changePricecal(id) {
     <input type="button" value="Change price" onclick=showPriceInputcal()>
   `;
 }
-
 
 function showPriceInputcap() {
   const priceContainer = document.getElementById("capprice");
@@ -144,18 +140,18 @@ function changePricecap(id) {
 
   // Send an HTTP POST request to the PHP script
   fetch("change_price.php", {
-      method: "POST",
-      body: formData,
+    method: "POST",
+    body: formData,
   })
-  .then(response => response.text())
-  .then(data => {
+    .then((response) => response.text())
+    .then((data) => {
       // Handle the response from the server (e.g., display a message to the user)
       retrieveprice();
       alert(data);
-  })
-  .catch(error => {
+    })
+    .catch((error) => {
       console.error("Error:", error);
-  });
+    });
 
   // After updating the price, reset the content
   const priceContainer = document.getElementById("capprice");
