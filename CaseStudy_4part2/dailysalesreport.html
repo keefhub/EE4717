@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaJam Coffee House - menu</title>
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body onload="popularitem()">
+    <header>
+      <img src="./image/javalogo.gif" alt="javajam logo" />
+    </header>
+    <div class="main-content">
+      <div class="nav-bar">
+        <nav>
+          <b>
+            <a href="index.html">Home</a> &nbsp;
+            <a href="menu.html">Menu</a> &nbsp;
+            <a href="music.html">Music</a> &nbsp;
+            <a href="jobs.html">Jobs</a>
+          </b>
+        </nav>
+      </div>
+      <div class="body">
+        <h2 style="font-size: 25px; font-family:sans-serif; color:rgb(92, 45, 45);">Click to generate daily sales report:</h2>
+        <div>
+          <table id="reporttable1" style="display:none;"></table>
+          <table id="reporttable2" style="display:none;"></table>
+          <table style="margin-left: 10px;" id="generator">
+            <tr>
+              <td>
+                <input type="button" value=" " style="font-size: 20px; background-color: burlywood;" onclick=productreport()>
+              </td>
+              <td>
+                <p style="font-size: 25px; font-family:sans-serif; color:rgb(92, 45, 45);">Total dollar and quantity sales by products</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="button" value=" " style="font-size: 20px; background-color: burlywood;" onclick=categoryreport()>
+              </td>
+              <td>
+                <p style="font-size: 25px; font-family:sans-serif; color:rgb(92, 45, 45);">Total dollar and quantity sales by categories</p>
+              </td>
+            </tr>
+          </table>
+          <span style="margin-left: 20px; font-size: 25px; font-family:sans-serif; color:rgb(92, 45, 45);">Popular option of best selling product is </span>
+          <span id="popularcat" style="font-size: 25px; font-family:sans-serif; color:rgb(92, 45, 45);"></span>
+          <span style="font-size: 25px; font-family:sans-serif; color:rgb(92, 45, 45);"> of </span>
+          <span id="populartype" style="font-size: 25px; font-family:sans-serif; color:rgb(92, 45, 45);"></span>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <footer>
+        <small><i> Copyright &copy; 2014 JavaJam Coffee House</i></small>
+        <br />
+        <a href="daryl@keith.com">daryl@keith.com</a>
+      </footer>
+    </div>
+  <script type="text/javascript" src="report.js"></script>
+  </body>
+</html>

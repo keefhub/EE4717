@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>JavaJam Coffee House - menu</title>
+  <link rel="stylesheet" href="index.css" />
+  <meta charset="utf-8" />
+</head>
+
+<body onload="retrieveprice()">
+  <header>
+    <img src="./image/javalogo.gif" alt="javajam logo" />
+  </header>
+  <div class="main-content">
+    <div class="nav-bar">
+      <nav>
+        <b>
+          <a href="index.html">Home</a> &nbsp;
+          <a href="menu.html">Menu</a> &nbsp;
+          <a href="music.html">Music</a> &nbsp;
+          <a href="jobs.html">Jobs</a>
+        </b>
+      </nav>
+    </div>
+    <div class="body">
+      <h2>Coffee at JavaJam</h2>
+      <div class="table">
+        <div>
+          <table>
+            <tr>
+              <td id="jjprice">
+                <input type="button" value="Change price" onclick=showPriceInputjj()>
+              </td>
+            </tr>
+            <tr>
+              <td id="calprice">
+                <input type="button" value="Change price" onclick=showPriceInputcal()>
+              </td>
+            </tr>
+            <tr>
+              <td id="capprice">
+                <input type="button" value="Change price" onclick=showPriceInputcap()>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <table border="1">
+          <tr>
+            <td class="pdt-menu">Just Java</td>
+            <td>
+              Regular house blend, decaffeinated coffee, or flavour of the
+              day. <br /><span style="font-weight: bold; font-size: large">Endless Cup </span><span id="pricejj" style="font-weight: bold; font-size: large"></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="pdt-menu">Cafe au Lait</td>
+            <td>
+              House blended coffee infused a smooth, steamed milk
+              <br />
+              <span style="font-weight: bold; font-size: large">Single </span><span id="calprice1" style="font-weight: bold; font-size: large"></span>
+                <span style="font-weight: bold; font-size: large">Double </span><span id="calprice2" style="font-weight: bold; font-size: large"></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="pdt-menu">Iced Cappucino</td>
+            <td>
+              Sweetened espresso blended with icy-cold milk and served in a
+              chilled glass <br />
+              <span style="font-weight: bold; font-size: large">Single </span><span id="capprice1" style="font-weight: bold; font-size: large"></span>
+                  <span style="font-weight: bold; font-size: large">Double </span><span id="capprice2" style="font-weight: bold; font-size: large"></span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <footer>
+      <small><i> Copyright &copy; 2014 JavaJam Coffee House</i></small>
+      <br />
+      <a href="daryl@keith.com">daryl@keith.com</a>
+    </footer>
+  </div>
+  <script type="text/javascript" src="priceupdate.js"></script>
+</body>
+
+</html>
