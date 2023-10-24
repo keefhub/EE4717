@@ -45,12 +45,15 @@ function showPriceInputjj() {
 function changePricejj() {
   const newPriceInput = document.getElementById("new-pricejj");
   const submittedPrice = newPriceInput.value;
-
+  price_regex = /^(?!-)[0-9]*\.?[0-9]+$/;
+  if (!price_regex.test(submittedPrice)) {
+    alert("Please enter a valid price");
+    return;
+  }
   // Create a FormData object to send the form data
   const formData = new FormData();
   formData.append("newPrice", submittedPrice);
   formData.append("priceId", 1);
-  console.log(formData);
 
   // Send an HTTP POST request to the PHP script
   fetch("change_price.php", {
