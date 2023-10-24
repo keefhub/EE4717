@@ -82,9 +82,9 @@ function showPriceInputcal() {
 
   // Create a text input and submit button using innerHTML
   priceContainer.innerHTML = `
-      <input type="text" id="new-pricecal2" placeholder="Enter New Price for Single">
+      <input type="number" step="0.1" min="0" id="new-pricecal2" placeholder="Enter New Price Single">
       <button id="submit-button" onclick="changePricecal(2)">Submit</button>
-      <input type="text" id="new-pricecal3" placeholder="Enter New Price for Double">
+      <input type="number" step="0.1" min="0" id="new-pricecal3" placeholder="Enter New Price Double">
       <button id="submit-button" onclick="changePricecal(3)">Submit</button>
 `;
 }
@@ -92,6 +92,11 @@ function showPriceInputcal() {
 function changePricecal(id) {
   const newPriceInput = document.getElementById("new-pricecal" + id);
   const submittedPrice = newPriceInput.value;
+  price_regex = /^(?!-)[0-9]*\.?[0-9]+$/;
+  if (!price_regex.test(submittedPrice)) {
+    alert("Please enter a valid price");
+    return;
+  }
 
   // Create a FormData object to send the form data
   const formData = new FormData();
@@ -125,9 +130,9 @@ function showPriceInputcap() {
 
   // Create a text input and submit button using innerHTML
   priceContainer.innerHTML = `
-      <input type="text" id="new-pricecap4" placeholder="Enter New Price">
+      <input type="number" step="0.1" min="0" id="new-pricecap4" placeholder="Enter New Price Single">
       <button id="submit-button" onclick="changePricecap(4)">Submit</button>
-      <input type="text" id="new-pricecap5" placeholder="Enter New Price">
+      <input type="number" step="0.1" min="0" id="new-pricecap5" placeholder="Enter New Price Double">
       <button id="submit-button" onclick="changePricecap(5)">Submit</button>
   `;
 }
@@ -135,7 +140,11 @@ function showPriceInputcap() {
 function changePricecap(id) {
   const newPriceInput = document.getElementById("new-pricecap" + id);
   const submittedPrice = newPriceInput.value;
-
+  price_regex = /^(?!-)[0-9]*\.?[0-9]+$/;
+  if (!price_regex.test(submittedPrice)) {
+    alert("Please enter a valid price");
+    return;
+  }
   // Create a FormData object to send the form data
   const formData = new FormData();
   formData.append("newPrice", submittedPrice);
