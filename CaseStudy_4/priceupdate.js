@@ -7,14 +7,21 @@ function retrieveprice() {
       switch(coffee.ID) {
         case 1:
           document.getElementById("pricejj").innerHTML = '$' + coffee.price;
+          break;
         case 2:
           document.getElementById("calprice1").innerHTML = '$' + coffee.price;
+          break;
         case 3:
           document.getElementById("calprice2").innerHTML = '$' + coffee.price;
+          break;
         case 4:
           document.getElementById("capprice1").innerHTML = '$' + coffee.price;
+          break;
         case 5:
           document.getElementById("capprice2").innerHTML = '$' + coffee.price;
+          break;
+        default:
+          break;
       }*/
         if (coffee.ID == 1) {
           document.getElementById("pricejj").innerHTML = "$" + coffee.price;
