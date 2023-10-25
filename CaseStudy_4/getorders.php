@@ -14,17 +14,17 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Query to fetch coffee prices
-$sql = "SELECT ID, price FROM coffeeprice";
+// Query to fetch orders
+$sql = "SELECT * FROM orders";
 
 $result = $conn->query($sql);
 
 // Create an array to store the results
-$prices = array();
+$orders = array();
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        $prices[] = $row;
+        $orders[] = $row;
     }
 }
 // Close the database connection
@@ -32,4 +32,4 @@ $conn->close();
 
 // Send the prices as JSON
 header('Content-Type: application/json');
-echo json_encode($prices);
+echo json_encode($orders);
