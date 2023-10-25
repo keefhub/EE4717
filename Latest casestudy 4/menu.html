@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaJam Coffee House - menu</title>
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body onload="retrieveprice()">
+    <header>
+      <img src="./image/javalogo.gif" alt="javajam logo" />
+    </header>
+    <div class="main-content">
+      <div class="nav-bar">
+        <nav>
+          <b>
+            <a href="index.html">Home</a> &nbsp;
+            <a href="menu.html">Menu</a> &nbsp;
+            <a href="music.html">Music</a> &nbsp;
+            <a href="jobs.html">Jobs</a>
+          </b>
+        </nav>
+      </div>
+      <div class="body">
+        <h2>Coffee at JavaJam</h2>
+        <form action="sendorder.php" method="POST">
+        <div class="tableheader">
+          <span style="">Quantity:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSubtotal:</span>
+        </div>
+          <div class="table">
+            <table border="1">
+              <tr>
+                <td class="pdt-menu">Just Java</td>
+                <td>
+                  Regular house blend, decaffeinated coffee, or flavour of the
+                  day. <br /><span style="font-weight: bold; font-size: large"
+                    >Endless Cup </span
+                  ><span
+                  id="pricejj"
+                  style="font-weight: bold; font-size: large"></span>
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    name="justjavaqty"
+                    size="3"
+                    min="0"
+                    max="99"
+                    oninput="javajam_price(); totalprice()" />
+                </td>
+                <td>
+                  <input type="number" id="justjavaprice" readonly />
+                </td>
+              </tr>
+              <tr>
+                <td class="pdt-menu">Cafe au Lait</td>
+                <td>
+                  House blended coffee infused a smooth, steamed milk
+                  <br /><span style="font-weight: bold; font-size: large"
+                    ><label>
+                      <input
+                        type="radio"
+                        name="cafeaulait"
+                        value="2.0"
+                        id="single"
+                        oninput="cafeaulait_price(); totalprice()" />
+                      Single </label>
+                      <span
+                      id="calprice1"
+                      style="font-weight: bold; font-size: large"></span>
+                    <label>
+                      <input
+                        type="radio"
+                        name="cafeaulait"
+                        value="3.0"
+                        id="double"
+                        oninput="cafeaulait_price(); totalprice()" />
+                      Double 
+                    </label>
+                    <span
+                      id="calprice2"
+                      style="font-weight: bold; font-size: large"></span>
+                      </span
+                  >
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    name="cafeaulaitqty"
+                    size="3"
+                    min="0"
+                    max="99"
+                    oninput="cafeaulait_price(); totalprice()" />
+                </td>
+                <td>
+                  <input type="number" id="cafeaulaitprice" readonly />
+                </td>
+              </tr>
+              <tr>
+                <td class="pdt-menu">Iced Cappucino</td>
+                <td>
+                  Sweetened espresso blended with icy-cold milk and served in a
+                  chilled glass <br /><span
+                    style="font-weight: bold; font-size: large"
+                    ><label>
+                      <input
+                        type="radio"
+                        name="icedcappucino"
+                        id="single_cappu"
+                        value="4.75"
+                        oninput="icedcappucino_price(); totalprice()" /> </label
+                    >Single <span
+                  id="capprice1"
+                  style="font-weight: bold; font-size: large"></span>
+                    <label>
+                      <input
+                        type="radio"
+                        name="icedcappucino"
+                        id="double_cappu"
+                        value="5.75"
+                        oninput="icedcappucino_price(); totalprice()" />
+                      Double <span
+                  id="capprice2"
+                  style="font-weight: bold; font-size: large"></span>
+                    </label>
+                  </span>
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    name="icedcappucinoqty"
+                    size="3"
+                    min="0"
+                    max="99"
+                    oninput="icedcappucino_price(); totalprice()" />
+                </td>
+                <td>
+                  <input type="number" id="icedcappucinoprice" readonly />
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <label for="total_price">Total Price:</label>
+                  <input type="number" id="total" readonly />
+                  <input type="submit" value="Check-out"> 
+                </td>
+              </tr>
+            </table>
+          </div>
+      </form>
+    </div>
+    <div class="footer">
+      <footer>
+        <small><i> Copyright &copy; 2014 JavaJam Coffee House</i></small>
+        <br />
+        <a href="daryl@keith.com">daryl@keith.com</a>
+      </footer>
+    </div>
+    <script type="text/javascript" src="priceupdate.js"></script>
+  </body>
+</html>
