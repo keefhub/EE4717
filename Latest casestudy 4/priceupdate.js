@@ -11,7 +11,7 @@ function retrieveprice() {
         } else if (coffee.ID == 3) {
           document.getElementById("calprice2").innerHTML = "$" + coffee.price;
           document.getElementById("double").value = coffee.price;
-        } else if (coffee.ID == 4) { 
+        } else if (coffee.ID == 4) {
           document.getElementById("capprice1").innerHTML = "$" + coffee.price;
           document.getElementById("single_cappu").value = coffee.price;
         } else if (coffee.ID == 5) {
